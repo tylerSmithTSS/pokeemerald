@@ -13,6 +13,7 @@
 #include "text.h"
 #include "constants/event_object_movement.h"
 #include "constants/items.h"
+#include "constants/map_groups.h"
 
 static u32 GetEnigmaBerryChecksum(struct EnigmaBerry *enigmaBerry);
 static bool32 BerryTreeGrow(struct BerryTree *tree);
@@ -119,7 +120,7 @@ const struct Berry gBerries[] =
         .name = _("CHERI"),
         .firmness = BERRY_FIRMNESS_SOFT,
         .size = 20,
-        .maxYield = 3,
+        .maxYield = 5,
         .minYield = 2,
         .description1 = sBerryDescriptionPart1_Cheri,
         .description2 = sBerryDescriptionPart2_Cheri,
@@ -137,7 +138,7 @@ const struct Berry gBerries[] =
         .name = _("CHESTO"),
         .firmness = BERRY_FIRMNESS_SUPER_HARD,
         .size = 80,
-        .maxYield = 3,
+        .maxYield = 5,
         .minYield = 2,
         .description1 = sBerryDescriptionPart1_Chesto,
         .description2 = sBerryDescriptionPart2_Chesto,
@@ -155,7 +156,7 @@ const struct Berry gBerries[] =
         .name = _("PECHA"),
         .firmness = BERRY_FIRMNESS_VERY_SOFT,
         .size = 40,
-        .maxYield = 3,
+        .maxYield = 5,
         .minYield = 2,
         .description1 = sBerryDescriptionPart1_Pecha,
         .description2 = sBerryDescriptionPart2_Pecha,
@@ -173,7 +174,7 @@ const struct Berry gBerries[] =
         .name = _("RAWST"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 32,
-        .maxYield = 3,
+        .maxYield = 5,
         .minYield = 2,
         .description1 = sBerryDescriptionPart1_Rawst,
         .description2 = sBerryDescriptionPart2_Rawst,
@@ -191,7 +192,7 @@ const struct Berry gBerries[] =
         .name = _("ASPEAR"),
         .firmness = BERRY_FIRMNESS_SUPER_HARD,
         .size = 50,
-        .maxYield = 3,
+        .maxYield = 5,
         .minYield = 2,
         .description1 = sBerryDescriptionPart1_Aspear,
         .description2 = sBerryDescriptionPart2_Aspear,
@@ -209,7 +210,7 @@ const struct Berry gBerries[] =
         .name = _("LEPPA"),
         .firmness = BERRY_FIRMNESS_VERY_HARD,
         .size = 28,
-        .maxYield = 3,
+        .maxYield = 5,
         .minYield = 2,
         .description1 = sBerryDescriptionPart1_Leppa,
         .description2 = sBerryDescriptionPart2_Leppa,
@@ -227,7 +228,7 @@ const struct Berry gBerries[] =
         .name = _("ORAN"),
         .firmness = BERRY_FIRMNESS_SUPER_HARD,
         .size = 35,
-        .maxYield = 3,
+        .maxYield = 5,
         .minYield = 2,
         .description1 = sBerryDescriptionPart1_Oran,
         .description2 = sBerryDescriptionPart2_Oran,
@@ -245,7 +246,7 @@ const struct Berry gBerries[] =
         .name = _("PERSIM"),
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 47,
-        .maxYield = 3,
+        .maxYield = 5,
         .minYield = 2,
         .description1 = sBerryDescriptionPart1_Persim,
         .description2 = sBerryDescriptionPart2_Persim,
@@ -263,8 +264,8 @@ const struct Berry gBerries[] =
         .name = _("LUM"),
         .firmness = BERRY_FIRMNESS_SUPER_HARD,
         .size = 34,
-        .maxYield = 2,
-        .minYield = 1,
+        .maxYield = 5,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Lum,
         .description2 = sBerryDescriptionPart2_Lum,
         .stageDuration = 12,
@@ -281,7 +282,7 @@ const struct Berry gBerries[] =
         .name = _("SITRUS"),
         .firmness = BERRY_FIRMNESS_VERY_HARD,
         .size = 95,
-        .maxYield = 3,
+        .maxYield = 5,
         .minYield = 2,
         .description1 = sBerryDescriptionPart1_Sitrus,
         .description2 = sBerryDescriptionPart2_Sitrus,
@@ -660,7 +661,7 @@ const struct Berry gBerries[] =
         .firmness = BERRY_FIRMNESS_SOFT,
         .size = 133,
         .maxYield = 2,
-        .minYield = 1,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Spelon,
         .description2 = sBerryDescriptionPart2_Spelon,
         .stageDuration = 18,
@@ -678,7 +679,7 @@ const struct Berry gBerries[] =
         .firmness = BERRY_FIRMNESS_VERY_SOFT,
         .size = 244,
         .maxYield = 2,
-        .minYield = 1,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Pamtre,
         .description2 = sBerryDescriptionPart2_Pamtre,
         .stageDuration = 18,
@@ -696,7 +697,7 @@ const struct Berry gBerries[] =
         .firmness = BERRY_FIRMNESS_SOFT,
         .size = 250,
         .maxYield = 2,
-        .minYield = 1,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Watmel,
         .description2 = sBerryDescriptionPart2_Watmel,
         .stageDuration = 18,
@@ -714,7 +715,7 @@ const struct Berry gBerries[] =
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 280,
         .maxYield = 2,
-        .minYield = 1,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Durin,
         .description2 = sBerryDescriptionPart2_Durin,
         .stageDuration = 18,
@@ -732,7 +733,7 @@ const struct Berry gBerries[] =
         .firmness = BERRY_FIRMNESS_VERY_SOFT,
         .size = 300,
         .maxYield = 2,
-        .minYield = 1,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Belue,
         .description2 = sBerryDescriptionPart2_Belue,
         .stageDuration = 18,
@@ -749,8 +750,8 @@ const struct Berry gBerries[] =
         .name = _("LIECHI"),
         .firmness = BERRY_FIRMNESS_VERY_HARD,
         .size = 111,
-        .maxYield = 2,
-        .minYield = 1,
+        .maxYield = 5,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Liechi,
         .description2 = sBerryDescriptionPart2_Liechi,
         .stageDuration = 24,
@@ -767,8 +768,8 @@ const struct Berry gBerries[] =
         .name = _("GANLON"),
         .firmness = BERRY_FIRMNESS_VERY_HARD,
         .size = 33,
-        .maxYield = 2,
-        .minYield = 1,
+        .maxYield = 5,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Ganlon,
         .description2 = sBerryDescriptionPart2_Ganlon,
         .stageDuration = 24,
@@ -785,8 +786,8 @@ const struct Berry gBerries[] =
         .name = _("SALAC"),
         .firmness = BERRY_FIRMNESS_VERY_HARD,
         .size = 95,
-        .maxYield = 2,
-        .minYield = 1,
+        .maxYield = 5,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Salac,
         .description2 = sBerryDescriptionPart2_Salac,
         .stageDuration = 24,
@@ -804,7 +805,7 @@ const struct Berry gBerries[] =
         .firmness = BERRY_FIRMNESS_VERY_HARD,
         .size = 237,
         .maxYield = 2,
-        .minYield = 1,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Petaya,
         .description2 = sBerryDescriptionPart2_Petaya,
         .stageDuration = 24,
@@ -822,7 +823,7 @@ const struct Berry gBerries[] =
         .firmness = BERRY_FIRMNESS_HARD,
         .size = 75,
         .maxYield = 2,
-        .minYield = 1,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Apicot,
         .description2 = sBerryDescriptionPart2_Apicot,
         .stageDuration = 24,
@@ -840,7 +841,7 @@ const struct Berry gBerries[] =
         .firmness = BERRY_FIRMNESS_SOFT,
         .size = 97,
         .maxYield = 2,
-        .minYield = 1,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Lansat,
         .description2 = sBerryDescriptionPart2_Lansat,
         .stageDuration = 24,
@@ -858,7 +859,7 @@ const struct Berry gBerries[] =
         .firmness = BERRY_FIRMNESS_SUPER_HARD,
         .size = 153,
         .maxYield = 2,
-        .minYield = 1,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Starf,
         .description2 = sBerryDescriptionPart2_Starf,
         .stageDuration = 24,
@@ -876,7 +877,7 @@ const struct Berry gBerries[] =
         .firmness = BERRY_FIRMNESS_UNKNOWN,
         .size = 0,
         .maxYield = 2,
-        .minYield = 1,
+        .minYield = 2,
         .description1 = sBerryDescriptionPart1_Enigma,
         .description2 = sBerryDescriptionPart2_Enigma,
         .stageDuration = 24,
@@ -1059,16 +1060,16 @@ static bool32 BerryTreeGrow(struct BerryTree *tree)
     case BERRY_STAGE_TALLER:
         tree->stage++;
         break;
-    case BERRY_STAGE_BERRIES:
-        tree->watered1 = 0;
-        tree->watered2 = 0;
-        tree->watered3 = 0;
-        tree->watered4 = 0;
-        tree->berryYield = 0;
-        tree->stage = BERRY_STAGE_SPROUTED;
-        if (++tree->regrowthCount == 10)
-            *tree = gBlankBerryTree;
-        break;
+    // case BERRY_STAGE_BERRIES:
+    //     tree->watered1 = 0;
+    //     tree->watered2 = 0;
+    //     tree->watered3 = 0;
+    //     tree->watered4 = 0;
+    //     tree->berryYield = 0;
+    //     tree->stage = BERRY_STAGE_SPROUTED;
+    //     if (++tree->regrowthCount == 10)
+    //         *tree = gBlankBerryTree;
+    //     break;
     }
     return TRUE;
 }
@@ -1082,14 +1083,14 @@ void BerryTreeTimeUpdate(s32 minutes)
     {
         tree = &gSaveBlock1Ptr->berryTrees[i];
 
-        if (tree->berry && tree->stage && !tree->stopGrowth)
+        if (tree->berry && tree->stage && !tree->stopGrowth && (tree->stage != BERRY_STAGE_BERRIES))
         {
-            if (minutes >= GetStageDurationByBerryType(tree->berry) * 71)
-            {
-                *tree = gBlankBerryTree;
-            }
-            else
-            {
+            // if (minutes >= GetStageDurationByBerryType(tree->berry) * 71)
+            // {
+            //     *tree = gBlankBerryTree;
+            // }
+            // else
+            // {
                 s32 time = minutes;
 
                 while (time != 0)
@@ -1106,7 +1107,7 @@ void BerryTreeTimeUpdate(s32 minutes)
                     if (tree->stage == BERRY_STAGE_BERRIES)
                         tree->minutesUntilNextStage *= 4;
                 }
-            }
+            // }
         }
     }
 }
@@ -1246,7 +1247,18 @@ static u8 CalcBerryYield(struct BerryTree *tree)
 
 static u8 GetBerryCountByBerryTreeId(u8 id)
 {
-    return gSaveBlock1Ptr->berryTrees[id].berryYield;
+    #define MAP_ROUTE_119 34
+    #define MAP_ROUTE_120 35
+    #define MAP_ROUTE_123 38
+
+    struct BerryTree *tree = GetBerryTreeInfo(id);
+    const struct Berry *berry = GetBerryInfo(tree->berry);
+    u16 currentMap = gMapHeader.regionMapSectionId;
+    
+    if (currentMap == MAP_ROUTE_119 || currentMap == MAP_ROUTE_120 || currentMap == MAP_ROUTE_123)
+        return berry->maxYield;
+    else
+        return gSaveBlock1Ptr->berryTrees[id].berryYield;
 }
 
 static u16 GetStageDurationByBerryType(u8 berry)
