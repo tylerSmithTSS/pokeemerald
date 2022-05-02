@@ -94,7 +94,7 @@ Route120_EventScript_BerryBeauty::
 	msgbox Route120_Text_BerriesExpressionOfLoveIsntIt, MSGBOX_YESNO
 	call_if_eq VAR_RESULT, YES, Route120_EventScript_BerryLove
 	call_if_eq VAR_RESULT, NO, Route120_EventScript_BerryNotLove
-	specialvar VAR_RESULT, GetPlayerTrainerIdOnesDigit
+	random 10
 	switch VAR_RESULT
 	case 0, Route120_EventScript_GiveFigyBerry
 	case 5, Route120_EventScript_GiveFigyBerry
