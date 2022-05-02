@@ -41,50 +41,52 @@
 #define FLAG_TEMP_1F     (TEMP_FLAGS_START + 0x1F)
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
-#define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
-#define FLAG_UNUSED_0x044    0x44 // Unused Flag
-#define FLAG_UNUSED_0x045    0x45 // Unused Flag
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
-#define FLAG_UNUSED_0x048    0x48 // Unused Flag
-#define FLAG_UNUSED_0x049    0x49 // Unused Flag
-#define FLAG_UNUSED_0x04A    0x4A // Unused Flag
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag
+// Cut Tree & smashed rock flags
+#define FLAG_HIDE_ROUTE_103_TREE_1                 0x20
+#define FLAG_HIDE_ROUTE_103_TREE_2                 0x21
+#define FLAG_HIDE_ROUTE_104_TREE_1                 0x22
+#define FLAG_HIDE_ROUTE_111_TREE_1                 0x23
+#define FLAG_HIDE_ROUTE_111_ROCK_1                 0x24
+#define FLAG_HIDE_ROUTE_111_ROCK_2                 0x25
+#define FLAG_HIDE_ROUTE_114_ROCK_1                 0x26
+#define FLAG_HIDE_ROUTE_114_ROCK_2                 0x27
+#define FLAG_HIDE_ROUTE_114_ROCK_3                 0x28
+#define FLAG_HIDE_ROUTE_114_ROCK_4                 0x29
+#define FLAG_HIDE_ROUTE_114_ROCK_5                 0x2A
+#define FLAG_HIDE_ROUTE_115_ROCK_1                 0x2B
+#define FLAG_HIDE_ROUTE_116_TREE_1                 0x2C
+#define FLAG_HIDE_ROUTE_116_TREE_2                 0x2D
+#define FLAG_HIDE_ROUTE_116_TREE_3                 0x2E
+#define FLAG_HIDE_ROUTE_116_TREE_4                 0x2F
+#define FLAG_HIDE_ROUTE_116_TREE_5                 0x30
+#define FLAG_HIDE_ROUTE_117_TREE_1                 0x31
+#define FLAG_HIDE_ROUTE_118_TREE_1                 0x32
+#define FLAG_HIDE_ROUTE_120_TREE_1                 0x33
+#define FLAG_HIDE_ROUTE_120_TREE_2                 0x34
+#define FLAG_HIDE_ROUTE_120_TREE_3                 0x35
+#define FLAG_HIDE_ROUTE_121_TREE_1                 0x36
+#define FLAG_HIDE_ROUTE_121_TREE_2                 0x37
+#define FLAG_HIDE_ROUTE_121_TREE_3                 0x38
+#define FLAG_HIDE_ROUTE_123_TREE_1                 0x39
+#define FLAG_HIDE_ROUTE_123_TREE_2                 0x3A
+#define FLAG_HIDE_ROUTE_123_TREE_3                 0x3B
+#define FLAG_HIDE_PETALBURG_WOODS_TREE_1           0x3C
+#define FLAG_HIDE_PETALBURG_WOODS_TREE_2           0x3D
+#define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_1_ROCK_1    0x3E
+#define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_2_ROCK_1    0x3F
+#define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_2_ROCK_2    0x40
+#define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_5_ROCK_1    0x41
+#define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_5_ROCK_2    0x42
+#define FLAG_HIDE_VICTORY_ROAD_B1F_ROCK_1          0x43
+#define FLAG_HIDE_VICTORY_ROAD_B1F_ROCK_2          0x44
+#define FLAG_HIDE_VICTORY_ROAD_B1F_ROCK_3          0x45
+#define FLAG_HIDE_VICTORY_ROAD_B1F_ROCK_4          0x46
+#define FLAG_HIDE_VICTORY_ROAD_B1F_ROCK_5          0x47
+#define FLAG_HIDE_VICTORY_ROAD_B1F_ROCK_6          0x48
+#define FLAG_HIDE_MIRAGE_TOWER_3F_ROCK_1           0x49
+#define FLAG_HIDE_MIRAGE_TOWER_3F_ROCK_2           0x4A
+#define FLAG_HIDE_MIRAGE_TOWER_4F_ROCK_1           0x4B
+
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag
 #define FLAG_UNUSED_0x04D    0x4D // Unused Flag
 #define FLAG_UNUSED_0x04E    0x4E // Unused Flag
