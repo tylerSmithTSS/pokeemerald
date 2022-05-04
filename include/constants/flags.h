@@ -87,10 +87,12 @@
 #define FLAG_HIDE_MIRAGE_TOWER_3F_ROCK_2           0x4A
 #define FLAG_HIDE_MIRAGE_TOWER_4F_ROCK_1           0x4B
 
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag
-#define FLAG_UNUSED_0x04D    0x4D // Unused Flag
-#define FLAG_UNUSED_0x04E    0x4E // Unused Flag
-#define FLAG_UNUSED_0x04F    0x4F // Unused Flag
+#define FLAG_SYS_NO_COLLISION       0x4C // Unused Flag //DEBUG
+#define FLAG_SYS_NO_ENCOUNTER       0x4D // Unused Flag //DEBUG
+#define FLAG_SYS_NO_TRAINER_SEE     0x4E // Unused Flag //DEBUG
+#define FLAG_SYS_NO_BAG_USE         0x4F // Unused Flag //DEBUG
+#define FLAG_SYS_NO_CATCHING        0x54 // Unused Flag //DEBUG
+#define FLAG_SYS_PC_FROM_DEBUG_MENU 0x55 // Unused Flag //DEBUG
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
@@ -98,8 +100,6 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
