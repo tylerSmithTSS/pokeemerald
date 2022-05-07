@@ -450,6 +450,11 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_REGIROCK] =                 &gObjectEventGraphicsInfo_Regirock,
     [OBJ_EVENT_GFX_REGICE] =                   &gObjectEventGraphicsInfo_Regice,
     [OBJ_EVENT_GFX_REGISTEEL] =                &gObjectEventGraphicsInfo_Registeel,
+
+    // [OBJ_EVENT_GFX_REGIROCK2] =                &gObjectEventGraphicsInfo_Regirock2,
+    // [OBJ_EVENT_GFX_REGICE2] =                  &gObjectEventGraphicsInfo_Regice2,
+    // [OBJ_EVENT_GFX_REGISTEEL2] =               &gObjectEventGraphicsInfo_Registeel2,
+    
     [OBJ_EVENT_GFX_SKITTY] =                   &gObjectEventGraphicsInfo_Skitty,
     [OBJ_EVENT_GFX_KECLEON] =                  &gObjectEventGraphicsInfo_Kecleon,
     [OBJ_EVENT_GFX_KYOGRE_ASLEEP] =            &gObjectEventGraphicsInfo_KyogreAsleep,
