@@ -87,12 +87,12 @@
 #define FLAG_HIDE_MIRAGE_TOWER_3F_ROCK_2           0x4A
 #define FLAG_HIDE_MIRAGE_TOWER_4F_ROCK_1           0x4B
 
-#define FLAG_SYS_NO_COLLISION       0x4C // Unused Flag //DEBUG
-#define FLAG_SYS_NO_ENCOUNTER       0x4D // Unused Flag //DEBUG
-#define FLAG_SYS_NO_TRAINER_SEE     0x4E // Unused Flag //DEBUG
-#define FLAG_SYS_NO_BAG_USE         0x4F // Unused Flag //DEBUG
-#define FLAG_SYS_NO_CATCHING        0x54 // Unused Flag //DEBUG
-#define FLAG_SYS_PC_FROM_DEBUG_MENU 0x55 // Unused Flag //DEBUG
+#define FLAG_SYS_NO_COLLISION       0x4C //DEBUG
+#define FLAG_SYS_NO_ENCOUNTER       0x4D //DEBUG
+#define FLAG_SYS_NO_TRAINER_SEE     0x4E //DEBUG
+#define FLAG_SYS_NO_BAG_USE         0x4F //DEBUG
+#define FLAG_SYS_NO_CATCHING        0x54 //DEBUG
+#define FLAG_SYS_PC_FROM_DEBUG_MENU 0x55 //DEBUG
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50
@@ -120,7 +120,7 @@
 #define FLAG_MOSSDEEP_GYM_SWITCH_3           0x66 //
 #define FLAG_MOSSDEEP_GYM_SWITCH_4           0x67 //
 
-#define FLAG_UNUSED_0x068                    0x68  // Unused Flag
+#define FLAG_FORCE_MIRAGE_ISLAND_VISIBLE     0x68  // Unused Flag
 
 #define FLAG_OCEANIC_MUSEUM_MET_REPORTER     0x69
 #define FLAG_RECEIVED_HM04                   0x6A
