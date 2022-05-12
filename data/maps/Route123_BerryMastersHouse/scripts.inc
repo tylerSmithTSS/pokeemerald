@@ -32,21 +32,7 @@ Route123_BerryMastersHouse_EventScript_ReceivedBerryToday::
 	msgbox Route123_BerryMastersHouse_Text_DoneForToday, MSGBOX_DEFAULT
 	release
 	end
-
-Route123_BerryMastersHouse_EventScript_BerryMastersWife::
-	lock
-	faceplayer
-	dotimebasedevents
-	goto_if_set FLAG_DAILY_BERRY_MASTERS_WIFE, Route123_BerryMastersHouse_EventScript_ReceivedWifeBerryToday
-	msgbox Route123_BerryMastersHouse_Text_HeardAGoodSayingLately, MSGBOX_DEFAULT
-	setvar VAR_0x8004, EASY_CHAT_TYPE_GOOD_SAYING
-	call Common_ShowEasyChatScreen
-	lock
-	faceplayer
-	goto_if_eq VAR_RESULT, TRUE, Route123_BerryMastersHouse_EventScript_GavePhrase
-	goto_if_eq VAR_RESULT, FALSE, Route123_BerryMastersHouse_EventScript_CancelPhrase
-	end
-
+	
 Route123_BerryMastersHouse_EventScript_CancelPhrase::
 	msgbox Route123_BerryMastersHouse_Text_Ah, MSGBOX_DEFAULT
 	msgbox Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife, MSGBOX_DEFAULT
@@ -60,6 +46,16 @@ Route123_BerryMastersHouse_EventScript_GavePhrase::
 	goto_if_eq VAR_0x8004, PHRASE_OVERWHELMING_LATIAS, Route123_BerryMastersHouse_EventScript_GiveWatmelBerry
 	goto_if_eq VAR_0x8004, PHRASE_COOL_LATIOS, Route123_BerryMastersHouse_EventScript_GiveDurinBerry
 	goto_if_eq VAR_0x8004, PHRASE_SUPER_HUSTLE, Route123_BerryMastersHouse_EventScript_GiveBelueBerry
+	end
+
+Route123_BerryMastersHouse_EventScript_GiveBerrySkipSaying::
+	msgbox Route123_BerryMastersHouse_Text_HusbandMakesMeProudIWantYouToHaveThis, MSGBOX_DEFAULT
+	random NUM_BERRY_MASTER_WIFE_BERRIES
+	addvar VAR_RESULT, FIRST_BERRY_INDEX
+	giveitem VAR_RESULT
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	goto Route123_BerryMastersHouse_EventScript_GaveBerry
+	release
 	end
 
 Route123_BerryMastersHouse_EventScript_GiveNormalBerry::
@@ -125,6 +121,66 @@ Route123_BerryMastersHouse_EventScript_ReceivedWifeBerryToday::
 Route123_BerryMastersHouse_EventScript_GaveBerry::
 	setflag FLAG_DAILY_BERRY_MASTERS_WIFE
 	msgbox Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife, MSGBOX_DEFAULT
+	release
+	end
+
+
+Route123_BerryMastersHouse_EventScript_BerryMastersWife::
+	lock
+	faceplayer
+	dotimebasedevents
+	goto_if_set FLAG_DAILY_BERRY_MASTERS_WIFE, Route123_BerryMastersHouse_EventScript_BerryMastersWife_2
+	goto_if_set FLAG_RECEIVED_SPELON_BERRY, Route123_BerryMastersHouse_EventScript_BerryMastersWife_5
+
+Route123_BerryMastersHouse_EventScript_BerryMastersWife_1::
+	msgbox Route123_BerryMastersHouse_Text_HeardAGoodSayingLately, MSGBOX_DEFAULT
+	setvar VAR_0x8004, EASY_CHAT_TYPE_GOOD_SAYING
+	call Common_ShowEasyChatScreen
+	lock
+	faceplayer
+	compare VAR_RESULT, TRUE
+	goto_if_eq Route123_BerryMastersHouse_EventScript_BerryMastersWife_8
+	goto Route123_BerryMastersHouse_EventScript_CancelPhrase
+	release
+	end
+
+Route123_BerryMastersHouse_EventScript_BerryMastersWife_2::
+	goto Route123_BerryMastersHouse_EventScript_ReceivedWifeBerryToday
+	goto Route123_BerryMastersHouse_EventScript_BerryMastersWife_1
+	release
+	end
+
+Route123_BerryMastersHouse_EventScript_BerryMastersWife_3::
+	goto Route123_BerryMastersHouse_EventScript_GiveBerrySkipSaying
+	release
+	end
+
+Route123_BerryMastersHouse_EventScript_BerryMastersWife_4::
+	goto_if_set FLAG_RECEIVED_WATMEL_BERRY, Route123_BerryMastersHouse_EventScript_BerryMastersWife_7
+	goto Route123_BerryMastersHouse_EventScript_BerryMastersWife_1
+	release
+	end
+
+Route123_BerryMastersHouse_EventScript_BerryMastersWife_5::
+	goto_if_set FLAG_RECEIVED_PAMTRE_BERRY, Route123_BerryMastersHouse_EventScript_BerryMastersWife_4
+	goto Route123_BerryMastersHouse_EventScript_BerryMastersWife_1
+	release
+	end
+
+Route123_BerryMastersHouse_EventScript_BerryMastersWife_6::
+	goto_if_set FLAG_RECEIVED_BELUE_BERRY, Route123_BerryMastersHouse_EventScript_BerryMastersWife_3
+	goto Route123_BerryMastersHouse_EventScript_BerryMastersWife_1
+	release
+	end
+
+Route123_BerryMastersHouse_EventScript_BerryMastersWife_7::
+	goto_if_set FLAG_RECEIVED_DURIN_BERRY, Route123_BerryMastersHouse_EventScript_BerryMastersWife_6
+	goto Route123_BerryMastersHouse_EventScript_BerryMastersWife_1
+	release
+	end
+
+Route123_BerryMastersHouse_EventScript_BerryMastersWife_8::
+	goto Route123_BerryMastersHouse_EventScript_GavePhrase
 	release
 	end
 

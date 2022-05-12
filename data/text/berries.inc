@@ -134,6 +134,12 @@ Route123_BerryMastersHouse_Text_JoyNeverGoesOutOfMyLife:
 Route123_BerryMastersHouse_Text_Ah:
 	.string "Ah…$"
 
+Route123_BerryMastersHouse_Text_HusbandMakesMeProudIWantYouToHaveThis:
+	.string "The way my husband grows BERRIES,\n"
+	.string "oh, he's the best in the world.\p"
+	.string "He makes me proud, that he does.\n"
+	.string "I want you to have this.$"
+
 Route104_PrettyPetalFlowerShop_Text_ThisIsPrettyPetalFlowerShop:
 	.string "Hello!\p"
 	.string "This is the PRETTY PETAL flower shop.\n"

@@ -1363,3 +1363,16 @@ void SetBerryTreesSeen(void)
         }
     }
 }
+
+
+bool8 ReceivedAllBerryMasterWifeSpecialBerries(void) {
+    if (FlagGet(FLAG_RECEIVED_SPELON_BERRY) == TRUE &&
+        FlagGet(FLAG_RECEIVED_PAMTRE_BERRY) == TRUE &&
+        FlagGet(FLAG_RECEIVED_WATMEL_BERRY) == TRUE &&
+        FlagGet(FLAG_RECEIVED_DURIN_BERRY)  == TRUE &&
+        FlagGet(FLAG_RECEIVED_BELUE_BERRY)  == TRUE) {
+        return TRUE;
+    }
+
+    return FALSE;
+}

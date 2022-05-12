@@ -26,6 +26,8 @@ void ObjectEventInteractionRemoveBerryTree(void);
 bool8 PlayerHasBerries(void);
 void SetBerryTreesSeen(void);
 
+bool8 ReceivedAllBerryMasterWifeSpecialBerries(void);
+
 extern const struct Berry gBerries[];
 
 struct BerryCrushBerryData {
