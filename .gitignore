@@ -38,3 +38,5 @@ porymap.project.cfg
 *.diff
 *.sym
 *.js
+data/maps/Route123_BerryMastersHouse/scripts-1.inc
+data/maps/Route123_BerryMastersHouse/scripts-previous.inc
