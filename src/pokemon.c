@@ -7089,3 +7089,27 @@ u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum)
         return gfx->spritePointers[spriteNum];
     }
 }
+
+void SetFirstDeoxysForm(void)
+{
+    u32 i;
+    u8 forme;
+
+    for (i = 0; i < 6; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == SPECIES_DEOXYS) {
+            forme = GetMonData(&gPlayerParty[i], MON_DATA_FORME, NULL);
+
+            if (forme == 3) 
+            {
+                forme = 0;
+            } 
+            else {
+                forme += 1;
+            }
+
+            SetMonData(&gPlayerParty[i], MON_DATA_FORME, &forme);
+            break;
+        }
+    }
+}
