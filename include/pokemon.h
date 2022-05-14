@@ -11,7 +11,6 @@ struct PokemonSubstruct0
     u8 ppBonuses;
     u8 friendship;
     u16 filler;
-    u16 forme;
 };
 
 struct PokemonSubstruct1
