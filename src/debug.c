@@ -2551,10 +2551,10 @@ static void DebugAction_Give_Pokemon_ComplexCreateMon(u8 taskId) //https://githu
             personality = ((((Random() % 8) ^ (HIHALF(otid) ^ LOHALF(otid))) ^ LOHALF(personality)) << 16) | LOHALF(personality);
         } while (nature != GetNatureFromPersonality(personality));
 
-        CreateEventLegalMon(&mon, species, level, 32, 1, personality, OT_ID_PRESET, otid);
+        CreateMon(&mon, species, level, 32, 1, personality, OT_ID_PRESET, otid);
     }
     else
-        CreateEventLegalMonWithNature(&mon, species, level, 32, nature);
+        CreateMonWithNature(&mon, species, level, 32, nature);
 
     //EVs/IVs
     for (i = 0; i < NUM_STATS; i++)
