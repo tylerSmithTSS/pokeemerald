@@ -1,5 +1,15 @@
 FallarborTown_CozmosHouse_MapScripts::
+	map_script MAP_SCRIPT_ON_LOAD, FallarborTown_CozmosHouse_OnLoad
 	.byte 0
+
+FallarborTown_CozmosHouse_OnLoad:
+	call_if_set FLAG_SYS_GAME_CLEAR, FallarborTown_CozmosHouse_EventScript_AddMeteoriteDisplay
+	end
+
+FallarborTown_CozmosHouse_EventScript_AddMeteoriteDisplay::
+	setmetatile 9, 4, METATILE_GenericBuilding_Rock_Display_Case_Top, FALSE
+	setmetatile 9, 5, METATILE_GenericBuilding_Rock_Display_Case_Bottom, TRUE
+	return
 
 FallarborTown_CozmosHouse_EventScript_ProfCozmo::
 	lock
