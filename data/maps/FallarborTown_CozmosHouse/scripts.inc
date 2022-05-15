@@ -74,6 +74,11 @@ FallarborTown_CozmosHouse_EventScript_CozmoIsHappy::
 	release
 	end
 
+FallarborTown_CozmosHouse_EventScript_InspectMeteoriteIfVisible::
+	call_if_set FLAG_SYS_GAME_CLEAR, FallarborTown_CozmosHouse_EventScript_InspectMeteorite
+	release
+	end
+
 FallarborTown_CozmosHouse_EventScript_InspectMeteorite::
 	@ callnative(SetFirstDeoxysForm)
 	msgbox FallarborTown_CozmosHouse_Text_MeteoriteDisplay, MSGBOX_DEFAULT
