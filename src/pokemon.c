@@ -4031,6 +4031,8 @@ u32 GetBoxMonData(struct BoxPokemon *boxMon, s32 field, u8 *data)
                 | (substruct3->worldRibbon << 26);
         }
         break;
+    case MON_DATA_FORME:
+        break;
     default:
         break;
     }
@@ -4347,6 +4349,12 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
         substruct3->speedIV = (ivs >> 15) & MAX_IV_MASK;
         substruct3->spAttackIV = (ivs >> 20) & MAX_IV_MASK;
         substruct3->spDefenseIV = (ivs >> 25) & MAX_IV_MASK;
+        break;
+    }
+    case MON_DATA_FORME:
+    {
+        // u8 forme = *data;
+        // substruct0->forme = forme;
         break;
     }
     default:
@@ -7087,5 +7095,29 @@ u8 *MonSpritesGfxManager_GetSpritePtr(u8 managerId, u8 spriteNum)
             spriteNum = 0;
 
         return gfx->spritePointers[spriteNum];
+    }
+}
+
+void SetFirstDeoxysForm(void)
+{
+    u32 i;
+    u8 forme;
+
+    for (i = 0; i < 6; i++)
+    {
+        if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == SPECIES_DEOXYS) {
+            forme = GetMonData(&gPlayerParty[i], MON_DATA_FORME, NULL);
+
+            if (forme == 3) 
+            {
+                forme = 0;
+            } 
+            else {
+                forme += 1;
+            }
+
+            SetMonData(&gPlayerParty[i], MON_DATA_FORME, &forme);
+            break;
+        }
     }
 }
