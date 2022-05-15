@@ -74,6 +74,12 @@ FallarborTown_CozmosHouse_EventScript_CozmoIsHappy::
 	release
 	end
 
+FallarborTown_CozmosHouse_EventScript_InspectMeteorite::
+	@ callnative(SetFirstDeoxysForm)
+	msgbox FallarborTown_CozmosHouse_Text_MeteoriteDisplay, MSGBOX_DEFAULT
+	release
+	end
+
 FallarborTown_CozmosHouse_Text_MeteoriteWillNeverBeMineNow:
 	.string "PROF. COZMO: Oh…\n"
 	.string "I never should have let myself be\l"
@@ -125,4 +131,8 @@ FallarborTown_CozmosHouse_Text_FeelSorryForCozmo:
 FallarborTown_CozmosHouse_Text_CozmoIsSoHappy:
 	.string "Look at PROF. COZMO…\n"
 	.string "He's so happy! I think it's cute.$"
+
+FallarborTown_CozmosHouse_Text_MeteoriteDisplay:
+	.string "A peculiar meteorite.\n"
+	.string "It's glowing green and red.$"
 
