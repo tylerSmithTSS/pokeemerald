@@ -1292,10 +1292,11 @@ MossdeepCity_GameCorner_1F_EventScript_MinigameInfoExit::
 MossdeepCity_GameCorner_1F_EventScript_OldMan2::
 	lock
 	faceplayer
-	message MossdeepCity_GameCorner_1F_Text_WelcomeCanYouWait
+	@ message MossdeepCity_GameCorner_1F_Text_WelcomeCanYouWait
+	message MossdeepCity_GameCorner_1F_Text_WelcomeSinglePlayer
 	waitmessage
-	specialvar VAR_RESULT, IsWirelessAdapterConnected
-	goto_if_eq VAR_RESULT, FALSE, MossdeepCity_GameCorner_1F_EventScript_AdapterNotConnected
+	@ specialvar VAR_RESULT, IsWirelessAdapterConnected
+	@ goto_if_eq VAR_RESULT, FALSE, MossdeepCity_GameCorner_1F_EventScript_AdapterNotConnected
 	delay 60
 	message MossdeepCity_GameCorner_1F_Text_PlayWhichGame
 	waitmessage
@@ -1336,7 +1337,8 @@ MossdeepCity_GameCorner_1F_EventScript_PlayDodrioBerryPicking::
 	call Common_EventScript_SaveGame
 	goto_if_eq VAR_RESULT, 0, MossdeepCity_GameCorner_1F_EventScript_AbortMinigame
 	setvar VAR_0x8004, LINK_GROUP_BERRY_PICKING
-	goto MossdeepCity_GameCorner_1F_EventScript_ChooseLinkLeader
+	@ goto MossdeepCity_GameCorner_1F_EventScript_ChooseLinkLeader
+	goto MossdeepCity_GameCorner_1F_EventScript_EnterMinigameRoom
 	end
 
 MossdeepCity_GameCorner_1F_EventScript_ChooseLinkLeader::
