@@ -28,6 +28,10 @@ MossdeepCity_GameCorner_1F_EventScript_OldMan::
 	release
 	end
 
+MossdeepCity_GameCorner_1F_Text_WelcomeSinglePlayer:
+	.string "Hi, welcome!\n"
+	.string "Would you like to play a\l"
+	.string "single-player game?$"
 
 @ Everything below is leftover from RS
 @ The house that was here in RS was moved to Sootopolis and replaced by the Game Corner
