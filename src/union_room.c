@@ -1737,7 +1737,15 @@ static void Task_StartActivity(u8 taskId)
         break;
     case ACTIVITY_BERRY_PICK:
         WarpForWirelessMinigame(USING_MINIGAME, 5, 1);
-        StartDodrioBerryPicking(GetCursorSelectionMonId(), CB2_LoadMap);
+        if (IsWirelessAdapterConnected())
+        {
+            StartDodrioBerryPicking(GetCursorSelectionMonId(), CB2_LoadMap);
+        }
+        else
+        {
+            StartSinglePlayerDodrioBerryPicking(GetCursorSelectionMonId(), CB2_LoadMap);
+        }
+        
         break;
     }
 
